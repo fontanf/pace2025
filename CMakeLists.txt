@@ -21,7 +21,7 @@ include(FetchContent)
 FetchContent_Declare(
     setcoveringsolver
     GIT_REPOSITORY https://github.com/fontanf/setcoveringsolver.git
-    GIT_TAG bd3fbbfb2d7afca41a14b446d94974851ee28d96
+    GIT_TAG 0a3c253d63e9eed76bf0c52320da042a78f416c9
     #SOURCE_DIR "${PROJECT_SOURCE_DIR}/../setcoveringsolver/"
     EXCLUDE_FROM_ALL)
 FetchContent_MakeAvailable(setcoveringsolver)
@@ -31,8 +31,6 @@ target_sources(Pace2025_pace2025_hs_heuristic_main PRIVATE
     pace2025_hs_heuristic_main.cpp)
 target_link_libraries(Pace2025_pace2025_hs_heuristic_main PUBLIC
     SetCoveringSolver_local_search_row_weighting
-    SetCoveringSolver_large_neighborhood_search
-    SetCoveringSolver_trivial_bound
     Boost::program_options)
 set_target_properties(Pace2025_pace2025_hs_heuristic_main PROPERTIES OUTPUT_NAME "pace2025_hs_heuristic")
 install(TARGETS Pace2025_pace2025_hs_heuristic_main)
@@ -42,8 +40,6 @@ target_sources(Pace2025_pace2025_ds_heuristic_main PRIVATE
     pace2025_ds_heuristic_main.cpp)
 target_link_libraries(Pace2025_pace2025_ds_heuristic_main PUBLIC
     SetCoveringSolver_local_search_row_weighting
-    SetCoveringSolver_large_neighborhood_search
-    SetCoveringSolver_trivial_bound
     Boost::program_options)
 set_target_properties(Pace2025_pace2025_ds_heuristic_main PROPERTIES OUTPUT_NAME "pace2025_ds_heuristic")
 install(TARGETS Pace2025_pace2025_ds_heuristic_main)
