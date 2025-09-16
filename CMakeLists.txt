@@ -21,7 +21,7 @@ include(FetchContent)
 FetchContent_Declare(
     setcoveringsolver
     GIT_REPOSITORY https://github.com/fontanf/setcoveringsolver.git
-    GIT_TAG bd3fbbfb2d7afca41a14b446d94974851ee28d96
+    GIT_TAG 2a0da5477bf78c99c188c2c71a62fbe797e71e4e
     #SOURCE_DIR "${PROJECT_SOURCE_DIR}/../setcoveringsolver/"
     EXCLUDE_FROM_ALL)
 FetchContent_MakeAvailable(setcoveringsolver)
